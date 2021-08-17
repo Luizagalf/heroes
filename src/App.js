@@ -4,9 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
 import Heroe from './components/Heroe';
-const jsonHeroes = require("./jsonHeroes.js");
-
-
+import jsonHeroes from './jsonHeroes.js';
 class App extends React.Component {
   render() {
   return (
@@ -14,7 +12,7 @@ class App extends React.Component {
       {
         jsonHeroes.map((heroe) =>
         <Col className="d-flex p-2">
-          <Heroe name={heroe.name} img={heroe.img} description={heroe.description} fact1={heroe.fact1} fact2={heroe.fact2} fact3={heroe.fact3} fact4={heroe.fact4} fact5={heroe.fact5}></Heroe>
+          <Heroe name={heroe.name} img={heroe.img} description={heroe.description} facts={heroe.facts}></Heroe>
         </Col>
         )
       }
